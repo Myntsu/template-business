@@ -1,0 +1,258 @@
+<div class="divider">
+    <div class="custom-shape-divider-top-1682232868">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M1200 120L0 16.48 0 0 1200 0 1200 120z" class="shape-fill"></path>
+        </svg>
+    </div>
+</div>
+
+<section id="Testimonials">
+    <h3>Testimonials</h3>
+    <h2>A very fulfilling message</h2>
+    <ul>
+        <li>
+            <div class="testimonial fade-in">
+                <div class="testimonial-img">
+                    <img src="https://picsum.photos/id/5/300/300" alt="Lorem picture">
+                </div>
+                <cite>"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus mollitia sequi voluptatibus sit veritatis ratione quas id iste. Accusamus, impedit aspernatur consequatur praesentium hic minus? Quaerat in quia reprehenderit minima?"</cite>
+                <h4>Name</h4>
+                <h5>Job</h5>
+                <i class="fa-solid fa-quote-right" aria-label="hidden"></i>
+            </div>
+        </li>
+        <li>
+            <div class="testimonial fade-in">
+                <div class="testimonial-img">
+                    <img src="https://picsum.photos/id/5/300/300" alt="Lorem picture">
+                </div>
+                <cite>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae esse assumenda rem ullam accusantium obcaecati! Aliquam possimus voluptatibus facere consectetur! Veniam nisi culpa reiciendis repellendus optio enim eaque natus magni?</cite>
+                <h4>Name</h4>
+                <h5>Job</h5>
+                <i class="fa-solid fa-quote-right" aria-label="hidden"></i>
+            </div>
+        </li>
+        <li>
+            <div class="testimonial fade-in">
+                <div class="testimonial-img">
+                    <img src="https://picsum.photos/id/5/300/300" alt="Lorem picture">
+                </div>
+                <cite>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae esse assumenda rem ullam accusantium obcaecati! Aliquam possimus voluptatibus facere consectetur! Veniam nisi culpa reiciendis repellendus optio enim eaque natus magni?</cite>
+                <h4>Name</h4>
+                <h5>Job</h5>
+                <i class="fa-solid fa-quote-right" aria-label="hidden"></i>
+            </div>
+        </li>
+    </ul>
+
+
+    <h2>Our affiliates</h2>
+    <div id="tag-cloud">
+        <div class="content"></div>
+    </div>
+</section>
+
+<style>
+    h2 {
+        display: flex;
+        justify-content: center;
+
+        position: relative;
+        color: hsl(var(--main-dark), 90%);
+    }
+
+    /* SVG */
+    .custom-shape-divider-top-1682232868 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        overflow: hidden;
+        line-height: 0;
+    }
+
+    .custom-shape-divider-top-1682232868 svg {
+        position: relative;
+        display: block;
+        width: calc(100% + 1.3px);
+        height: 125px;
+    }
+
+    .custom-shape-divider-top-1682232868 .shape-fill {
+        fill: hsl(var(--main-dark));
+    }
+
+    /* Testimonials */
+    #Testimonials {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        width: 100%;
+        max-width: 1100px;
+        margin-inline: auto;
+        background-color: hsl(var(--white));
+        padding: var(--padding);
+    }
+
+    #Testimonials > h3 {
+        margin: 0;
+        font-size: .875rem;
+        color: hsl(var(--important));    
+
+        text-align: center;
+    }
+
+    #Testimonials > h2 {
+        font-size: 3rem;
+        margin-block-start: 0;
+        margin-block-end: 4rem;
+        
+        text-align: center;
+    }
+
+    #Testimonials ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(min(325px, 100%), 1fr));
+        gap: 2rem;
+
+        background-color: hsl(var(--white));
+    }
+
+    #Testimonials li {
+        display: flex;
+        flex-direction: column;
+
+        padding: 0;
+        background-color: hsl(var(--white));
+    }
+
+    #Testimonials *:is(h4, h5) {
+        margin: 0;
+    }
+
+    @media only screen and (max-width: 1070px) {
+        #Testimonials ul {
+            gap: 5rem;
+        }
+    }
+
+    .testimonial {
+        --position: .5rem;
+        --size: 2rem;
+
+        flex-grow: 1;
+
+        display: flex;
+        flex-direction: column;
+
+        padding: calc(var(--padding) * 3) calc(var(--padding) * 2) calc(var(--padding) * 2);
+        background-color: hsl(var(--main-dark));
+        border-radius: var(--radius-accent);
+
+        margin-block-end: 4rem;
+        
+        box-shadow: 3px 5px 20px hsl(var(--main-dark), 65%);
+    
+        position: relative;
+    }
+
+    .testimonial::before,
+    .testimonial::after {
+        content: '';
+        position: absolute;
+
+        width: var(--size);
+        height: var(--size);
+
+        transition: all 400ms ease;
+    }
+
+    .testimonial::before {
+        top: var(--position);
+        right: var(--position);
+
+        border-top: calc(var(--padding) - .75rem) solid hsl(var(--important));
+        border-right: calc(var(--padding) - .75rem) solid hsl(var(--important));
+        border-radius: 0 var(--radius-accent) 0 0;
+    }
+
+    .testimonial::after {
+        left: var(--position);
+        bottom: var(--position);
+
+        border-left: calc(var(--padding) - .75rem) solid hsl(var(--important));
+        border-bottom: calc(var(--padding) - .75rem) solid hsl(var(--important));
+        border-radius: 0 0 0 var(--radius-accent);
+    }
+
+    li:is(:hover, :focus-visible) .testimonial::before,
+    li:is(:hover, :focus-visible) .testimonial::after {
+        --position: 2rem;
+    }
+
+    li:is(:hover, :focus-visible) .testimonial {
+        background-color: hsl(var(--main-dark), 97%);
+        transition: all 1000ms ease;
+    }
+
+    li:is(:hover, :focus-visible) .testimonial-img {
+        border: .2rem solid hsl(var(--main-dark), 93%);
+    }
+
+    .testimonial-img {
+        position: absolute;
+        top: 0rem;
+        left: 4rem;
+        transform: translate(-50%, -50%);
+        border: .2rem solid hsl(var(--main-dark));
+        border-radius: .25rem;
+    }
+
+    .testimonial-img img {
+        display: block;
+        width: 5rem;
+        height: 5rem;
+    }
+    
+    .testimonial cite {
+        margin-block: 1rem;
+        font-size: .925rem;
+        line-height: 1.5;
+    }
+
+    .testimonial h4 {
+        font-size: 1.25rem;
+        border-left: calc(var(--padding) - 1rem) solid hsl(var(--important));
+        padding-inline-start: calc(var(--padding) - 1rem);
+    }
+
+    .testimonial h5 {
+        font-size: 1.1rem;
+        padding-inline-start: calc(var(--padding) - .5rem);
+        font-style: italic;
+        font-weight: 400;
+    }
+
+    .testimonial i {
+        margin-block-start: auto;
+        margin-inline-start: auto;
+        font-size: calc(var(--height) * 2);
+    }
+
+    #tag-cloud {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+</style>
+
+<script>
+    import '/src/js/tag-cloud.js';
+</script>

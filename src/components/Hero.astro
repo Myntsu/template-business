@@ -1,0 +1,188 @@
+<header id="Home">
+    <div class="hero-wrapper">
+        <h1>Frase importante</h1>
+        <h2>Algo que <span class="important-contrast">puedes lograr</span> con Deico</h2>
+        <a href="" class="call-to-action">
+            Llamado de accion
+        </a>
+
+        <div class="custom-shape-divider-bottom-1669747585">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M1200 120L0 16.48 0 0 1200 0 1200 120z" class="shape-fill"></path>
+            </svg>
+        </div>
+    </div>
+</header>
+
+<style>
+    /* Header */
+    #Home {
+        background-image:
+            linear-gradient(180deg,
+                hsl(0, 0%, 0%, 100%) 15%,
+                transparent,
+                transparent),
+            url('https://images.unsplash.com/photo-1605379399642-870262d3d051?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=906&q=80');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+
+        position: relative;
+        isolation: isolate;
+        z-index: 0;
+
+        min-height: 100svh;
+    }
+
+    #Home::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        inset: 0;
+        background-color: hsl(var(--main-dark));
+        z-index: -1;
+        opacity: .2;
+    }
+
+    .hero-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        max-width: 1100px;
+        min-height: 100vh;
+        margin: 0 auto;
+        padding-inline-start: 5em;
+    }
+
+    .hero-wrapper h1,
+    .hero-wrapper h2 {
+        margin: 0;
+    }
+
+    .hero-wrapper h1 {
+        font-size: clamp(2rem, 1.6154rem + 1.2308vw, 3rem);
+    }
+
+    .hero-wrapper h2 {
+        font-size: clamp(1rem, 0.6154rem + 1.2308vw, 2rem);
+    }
+
+    .call-to-action {
+        margin-block-start: 1rem;
+        padding: 0 1rem;
+
+        background-color: hsl(var(--main-dark));
+
+        font-size: calc(var(--font) * 2);
+        color: hsl(var(--white));
+        text-decoration: none;
+
+        outline: 2px solid hsl(var(--important));
+        outline-offset: 3px;
+        border-radius: calc(var(--radius) - .125em);
+    }
+
+    .call-to-action:is(:hover, :focus-visible) {
+        scale: .95;
+        opacity: .5;
+    }
+
+    .custom-shape-divider-bottom-1669747585 {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        overflow: hidden;
+        line-height: 0;
+        transform: rotate(180deg);
+    }
+
+    .custom-shape-divider-bottom-1669747585 svg {
+        position: relative;
+        display: block;
+        width: calc(100% + 1.3px);
+        height: 108px;
+        transform: rotateY(180deg);
+    }
+
+    .custom-shape-divider-bottom-1669747585 .shape-fill {
+        fill: hsl(var(--main-dark));
+    }
+
+    @media only screen and (max-width: 760px) {
+        .navbar {
+            background-color: hsl(var(--main-dark));
+        }
+
+        .navbar-wrapper {
+            justify-content: space-between;
+            position: relative;
+
+            padding: 2em 1.5em;
+        }
+
+        .navbar-toggler {
+            display: inline;
+        }
+
+        .navbar-items {
+            visibility: hidden;
+            position: absolute;
+            flex-direction: column;
+            gap: 1em;
+
+            opacity: 0;
+            transform: translateY(-150%);
+        }
+
+        #checkbox:checked~.navbar {
+            background-color: red;
+        }
+
+        #checkbox:checked {
+            margin-bottom: 5rem;
+        }
+
+        #checkbox:checked~.navbar-items {
+            visibility: visible;
+            top: calc(var(--height));
+            left: 0;
+            z-index: 1;
+
+            width: 100%;
+            padding: 1em;
+            margin-top: calc(var(--font) + 2vh);
+            padding-top: calc(var(--font) + 2vh);
+
+            background-color: hsl(var(--main-dark));
+            border-bottom: 1px solid hsl(var(--border-clr), 80%);
+
+            opacity: 1;
+            transform: translateY(0%);
+            transform-origin: top;
+            transition: 500ms ease;
+        }
+
+        #checkbox:checked~.navbar-items>a {
+            transition-delay: 400ms;
+        }
+
+        .separator {
+            display: none;
+        }
+
+        .navbar-items a:is(:hover, :focus-within)::before {
+            width: 0%;
+        }
+
+        .hero-wrapper {
+            padding-inline-start: 1em;
+        }
+
+        .active::after {
+            background-color: transparent;
+        }
+    }
+</style>
