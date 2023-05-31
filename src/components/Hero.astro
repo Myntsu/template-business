@@ -1,9 +1,9 @@
 <header id="Home">
     <div class="hero-wrapper">
-        <h1>Frase importante</h1>
-        <h2>Algo que <span class="important-contrast">puedes lograr</span> con Deico</h2>
-        <a href="" class="call-to-action">
-            Llamado de accion
+        <h1>Sin importar tu meta</h1>
+        <h2>Con nostros <span class="important-contrast">lo puedes lograr</span> sin duda</h2>
+        <a href="#Contact" class="call-to-action">
+            <p>Contactanos <i class="fa-solid fa-angles-down"></i></p>
         </a>
 
         <div class="custom-shape-divider-bottom-1669747585">
@@ -53,7 +53,7 @@
         max-width: 1100px;
         min-height: 100vh;
         margin: 0 auto;
-        padding-inline-start: 5em;
+        text-align: center;
     }
 
     .hero-wrapper h1,
@@ -73,20 +73,46 @@
         margin-block-start: 1rem;
         padding: 0 1rem;
 
-        background-color: hsl(var(--main-dark));
+        background-color: hsl(var(--important));
 
         font-size: calc(var(--font) * 2);
         color: hsl(var(--white));
         text-decoration: none;
 
-        outline: 2px solid hsl(var(--important));
-        outline-offset: 3px;
         border-radius: calc(var(--radius) - .125em);
+        overflow: hidden;
+    }
+
+    .call-to-action p {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        margin: 0;
+    }
+
+    .call-to-action i {
+        position: absolute;
+        visibility: collapse;
+        opacity: 0;
+        font-size: 1.25rem;
+        transform: translate(0%, -100%);
+
     }
 
     .call-to-action:is(:hover, :focus-visible) {
-        scale: .95;
-        opacity: .5;
+        opacity: .9;
+        width: 12ch;
+        outline: 1px solid hsl(var(--white));
+        outline-offset: 2px;
+    }
+
+    .call-to-action:is(:hover, :focus-visible) i {
+        position: static;
+        visibility: visible;
+        opacity: 1;
+        transform: translate(0%, 0%);
+        transition: all 300ms linear;
     }
 
     .custom-shape-divider-bottom-1669747585 {
