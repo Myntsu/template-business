@@ -25,7 +25,7 @@ const { favicon = "/favicon/", faviconLight = "/favicon/" } = Astro.props as Pro
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<meta name="viewport" content="width=device-width" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 		<link rel="icon" type="image/svg+xml" href={favicon} media="(prefers-color-scheme: dark)" />
 		<link rel="icon" type="image/svg+xml" href={faviconLight} media="(prefers-color-scheme: light)" />
@@ -49,8 +49,8 @@ const { favicon = "/favicon/", faviconLight = "/favicon/" } = Astro.props as Pro
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
-	
-		<script defer src="../src/js/TagCloud.min.js"></script>
+
+		<script defer src="https://cdn.jsdelivr.net/npm/TagCloud@2.2.0/dist/TagCloud.min.js"></script>
 	</head>
 	<body>
 		<Navbar />
