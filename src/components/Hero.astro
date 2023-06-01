@@ -1,9 +1,9 @@
 <header id="Home">
     <div class="hero-wrapper">
         <h1>Sin importar tu meta</h1>
-        <h2>Con nostros <span class="important-contrast">lo puedes lograr</span> sin duda</h2>
+        <h2>Con nosotros <span class="important-contrast">lo puedes lograr</span> sin duda</h2>
         <a href="#Contact" class="call-to-action">
-            <p>Contactanos <i class="fa-solid fa-angles-down"></i></p>
+            
         </a>
 
         <div class="custom-shape-divider-bottom-1669747585">
@@ -70,44 +70,52 @@
     }
 
     .call-to-action {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: min(12ch, 100%);
         margin-block-start: 1rem;
         padding: 0 1rem;
 
-        background-color: hsl(var(--important));
+        background-color: hsl(var(--important), 70%);
 
         font-size: calc(var(--font) * 2);
         color: hsl(var(--white));
+        text-align: center;
         text-decoration: none;
 
         border-radius: calc(var(--radius) - .125em);
         overflow: hidden;
+        backdrop-filter: blur(5px);
+        box-shadow: 0 0 5px hsl(0 0% 9% / .7);
     }
 
-    .call-to-action p {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 1rem;
-        margin: 0;
+    .call-to-action::before {
+        content: 'Contáctanos';
+        color: inherit;
+        opacity: 1;
     }
 
-    .call-to-action i {
+    .call-to-action::after {
+        content: '\f103';
+        font-family: 'Font Awesome 6 Free';
+        font-weight: 900;
         position: absolute;
-        visibility: collapse;
-        opacity: 0;
-        font-size: 1.25rem;
         transform: translate(0%, -100%);
-
     }
 
     .call-to-action:is(:hover, :focus-visible) {
-        opacity: .9;
-        width: 12ch;
         outline: 1px solid hsl(var(--white));
         outline-offset: 2px;
     }
 
-    .call-to-action:is(:hover, :focus-visible) i {
+    .call-to-action:is(:hover, :focus-visible)::before {
+        content: '';
+        opacity: 0;
+        transition: opacity 150ms linear;
+    }
+
+    .call-to-action:is(:hover, :focus-visible)::after {
         position: static;
         visibility: visible;
         opacity: 1;

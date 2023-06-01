@@ -75,3 +75,11 @@ const observer = new IntersectionObserver(
 
 const hiddenElements = document.querySelectorAll('.hidden, .fade-in');
 hiddenElements.forEach((el) => observer.observe(el));
+
+// Fixed alert popup
+let alert = document.querySelector('.popup-alert')
+let toggleAlert = document.querySelector('.popup-toggle');
+
+toggleAlert.onclick = function() {
+    alert.classList.toggle('active-alert');
+}
