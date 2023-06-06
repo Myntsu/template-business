@@ -1,8 +1,10 @@
 <header id="Home">
     <div class="hero-wrapper">
-        <h1>Sin importar tu meta</h1>
-        <h2>Con nosotros <span class="important-contrast">lo puedes lograr</span> sin duda</h2>
-        <a href="#Contact" class="call-to-action">
+        <div class="headers-mask">
+            <h1>Sin importar tu meta</h1>
+            <h2>Con nosotros <span class="important-contrast">lo puedes lograr</span> sin duda</h2>
+        </div>
+        <a href="#Contact" aria-label="Contáctanos" class="call-to-action">
             
         </a>
 
@@ -54,6 +56,17 @@
         min-height: 100vh;
         margin: 0 auto;
         text-align: center;
+    }
+
+    .headers-mask {
+        padding: 1rem;
+        backdrop-filter: blur(10px);
+        /* border-radius: .5rem;
+        background-image: linear-gradient(
+            0deg,    
+            transparent,
+            hsl(0 0% 9% / 1)
+        ); */
     }
 
     .hero-wrapper h1,
