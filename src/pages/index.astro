@@ -32,17 +32,18 @@ import '../css/tag-cloud.css'
                 <div>
                     <i class="fa-solid fa-circle-info"></i>
                 </div>
-                <p class="social-media"> Si te gusto esta plantilla, no dudes en contactarme rellenando el <a href="#Contact" style="text-decoration: underline;">formulario</a>. Me pondré en contacto contigo via Whatsapp chat o Email.</p>
+                <p class="social-media"> Si te gusto esta plantilla, no dudes en contactarme rellenando el <a href="#Contact" style="text-decoration: underline; color: white;">formulario</a>. Me pondré en contacto contigo via Whatsapp chat o Email.</p>
             </div>
         </div>
     </div>
     <button type="button" class="popup-toggle">
+        <span>+</span>
     </button>
 </div>
 </Layout>
 
 <style>
-	.alert {
+.alert {
     display: flex;
     gap: 1em;
 
@@ -93,7 +94,7 @@ import '../css/tag-cloud.css'
     scale: 1.05;
 }
 
-.popup-alert.active-alert + .popup-toggle::before {
+.popup-alert.active-alert + .popup-toggle span {
     rotate: 45deg;
 }
 
@@ -117,8 +118,6 @@ import '../css/tag-cloud.css'
     right: 1rem;
 
     display: flex;
-    justify-content: center;
-    align-items: center;
 
     width: 50px;
     height: 50px;
@@ -130,15 +129,12 @@ import '../css/tag-cloud.css'
     cursor: pointer;
 }
 
-.popup-toggle::before {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    content: '+';
+.popup-toggle span {
+    display: block;
+    width: 100%;
     color: hsl(var(--text));
     font-size: 2rem;
-    transition: all 300ms linear;
+    transition: rotate 300ms linear;
 }
 </style>
 

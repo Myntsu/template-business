@@ -86,6 +86,7 @@ const { favicon = "/favicon/", faviconLight = "/favicon/" } = Astro.props as Pro
 
 	html {
 		scroll-behavior: smooth;
+		scroll-padding-block-start: 4rem;
 	}
 
 	body {
@@ -98,6 +99,11 @@ const { favicon = "/favicon/", faviconLight = "/favicon/" } = Astro.props as Pro
 		font-weight: 400;
 		line-height: 1.5;
 		overflow-x: hidden;
+	}
+
+	section {
+		padding-block: 5rem;
+		padding-inline: 1rem;
 	}
 
 	/* Utility class */
@@ -197,105 +203,6 @@ const { favicon = "/favicon/", faviconLight = "/favicon/" } = Astro.props as Pro
 		.hidden {
 			transition: none;
 		}
-	}
-
-	.alert {
-		display: flex;
-		gap: 1em;
-
-		max-width: 600px;
-
-		margin: auto;
-		padding: 1em;
-		color: white;
-		background-color: rgba(153, 50, 204);
-		border-radius: var(--radius-accent);
-	}
-
-	.alert > div {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		font-size: clamp(2.5rem, 1.5rem + 1.3333vw, 3rem);
-	}
-
-	.popup-alert {
-		display: flex;
-		bottom: 85px;
-		right: 20px;
-
-		position: fixed;
-		width: 0px;
-		height: 0px;
-		background-color: rgba(153, 50, 204);
-		border: 1px solid white;
-		border-radius: var(--radius);
-
-		opacity: 0;
-		visibility: collapse;
-		z-index: 9999;
-	}
-
-	.popup-alert.active-alert {
-		width: 400px;
-		height: auto;
-		opacity: 1;
-		visibility: visible;
-		transition: opacity 500ms ease-in-out;
-	}
-
-	.popup-alert.active-alert + .popup-toggle {
-		background-color: rgba(153, 50, 204);
-		border: 1px solid white;
-		scale: 1.05;
-	}
-
-	.popup-alert.active-alert + .popup-toggle::before {
-		rotate: 45deg;
-	}
-
-	.popup-alert::before {
-		content: '';
-		position: absolute;
-		right: 10px;
-		bottom: -11px;
-		width: 20px;
-		height: 20px;
-		background-color: rgba(153, 50, 204);
-		border-bottom: 1px solid white;
-		border-right: 1px solid white;
-		rotate: 45deg;
-		z-index: 9990;
-	}
-
-	.popup-toggle {
-		position: fixed;
-		bottom: 1rem;
-		right: 1rem;
-
-		display: flex;
-		justify-content: center;
-		align-items: center;
-
-		width: 50px;
-		height: 50px;
-
-		background-color: hsl(var(--important));
-		border: 0;
-		border-radius: 50%;
-
-		cursor: pointer;
-	}
-
-	.popup-toggle::before {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-
-		content: '+';
-		color: hsl(var(--text));
-		font-size: 2rem;
-		transition: all 300ms linear;
 	}
 
 	@media only screen and (max-width: 760px) {
