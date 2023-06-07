@@ -4,7 +4,7 @@
         <h2>Quienes somos</h2>
         <div class="proposals-wrapper">
             <div class="about-us">
-                <img src="https://placehold.co/450x500/EEE/31343C" alt="">
+                <img src="https://placehold.co/450x500/EEE/31343C" alt="" style="max-width: 100%;">
                 <div>
                     <h3>Aquí iria mucho texto</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam consequatur voluptate minus, rerum ullam esse veritatis ducimus sint reiciendis perspiciatis, repudiandae sequi cum molestiae quisquam quo iste maxime a consequuntur.
@@ -74,7 +74,10 @@
     }
 
     .proposals-wrapper {
-
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
+        gap: var(--padding);
+        place-items: center;
     }
 
     .about-us {
