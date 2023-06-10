@@ -2,16 +2,33 @@
     <div>
         <h3>Nosotros</h3>
         <h2>Quienes somos</h2>
-        <div class="proposals-wrapper">
+        <div class="wrapper">
             <div class="about-us">
                 <img src="https://placehold.co/450x500/EEE/31343C" alt="" style="max-width: 100%;">
                 <div>
-                    <h3>Aquí iria mucho texto</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam consequatur voluptate minus, rerum ullam esse veritatis ducimus sint reiciendis perspiciatis, repudiandae sequi cum molestiae quisquam quo iste maxime a consequuntur.
-                    Autem provident voluptatem ut! Exercitationem vel rem voluptatum et quis dolor, molestias sunt obcaecati earum itaque architecto recusandae modi consectetur eius officia suscipit, excepturi placeat quidem accusantium distinctio error facere.
-                    Sed repellendus ab nihil neque eius delectus dicta accusamus distinctio quidem quisquam expedita veniam esse recusandae quibusdam, deleniti eveniet consequatur consequuntur, suscipit nisi eos! Tempora neque explicabo voluptate ad nesciunt?
-                    Nulla maxime autem ex, deserunt libero ut quod iusto ullam quae velit facere voluptates quam corrupti! Delectus sapiente commodi asperiores ab aperiam quos, eum impedit accusamus sunt perspiciatis repellat officia.
-                    Voluptatem nisi officiis earum possimus nostrum provident qui hic id, autem dolorum ab optio labore quo voluptates expedita quaerat quisquam fugit, ipsum, incidunt inventore architecto illum! Nobis impedit ducimus possimus!</p>
+                    <h3>Te invitamos a conocernos</h3>
+                    <div>
+                        <button type="button"></button>
+                    </div>
+                    <div>
+                        <button type="button"></button>
+                    </div>
+                    <details>
+                        <summary>
+                            Visión
+                        </summary>
+                        <p>
+                            Nuestra visión es que todo el mundo se entere de lo que venimos a hacer, con una amalgama de posibilidades nunca antes vista.
+                        </p>
+                    </details>
+                    <details>
+                        <summary>
+                            Misión
+                        </summary>
+                        <p>
+                            Nuestra misión es proporcionar uno de los mejores servicios antes vistos por la sociedad.
+                        </p>
+                    </details>
                 </div>
             </div>
         </div>
@@ -43,6 +60,10 @@
 <style>
     #Proposals {
         background-color: hsl(var(--main-dark));
+    }
+
+    #Proposals > div:first-child {
+        margin-block-end: 5rem;
     }
 
     #Proposals > div {
@@ -80,7 +101,30 @@
         place-items: center;
     }
 
+    .wrapper {
+        display: flex;
+    }
+
     .about-us {
+        display: flex;
+    }
+
+    details {
+        border: 1px solid hsl(var(--white), 10%);
+        border-radius: .25rem;
+        cursor: pointer;
+        pointer-events: all;
+    }
+
+    details[open] {
+
+    }
+
+    details > p {
+        margin: 0;
+    }
+    
+    details[open] > p {
 
     }
 
@@ -118,9 +162,5 @@
 
     .title {
         text-align: center;
-    }
-
-    .description {
-        
     }
 </style>
