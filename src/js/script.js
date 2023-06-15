@@ -73,7 +73,7 @@ const observer = new IntersectionObserver(
     }
 );
 
-const hiddenElements = document.querySelectorAll('.hidden, .fade-in');
+const hiddenElements = document.querySelectorAll('.hidden, .fade-in, .fade');
 hiddenElements.forEach((el) => observer.observe(el));
 
 // Fixed alert popup
