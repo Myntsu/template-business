@@ -83,3 +83,16 @@ let toggleAlert = document.querySelector('.popup-toggle');
 toggleAlert.onclick = function() {
     alert.classList.toggle('active-alert');
 }
+
+// Details open/close on click
+const detailsElements = document.querySelectorAll('details');
+
+detailsElements.forEach(details => {
+  details.addEventListener('click', () => {
+    detailsElements.forEach(element => {
+      if (element !== details) {
+        element.removeAttribute('open');
+      }
+    });
+  });
+});

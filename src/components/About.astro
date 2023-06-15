@@ -11,12 +11,13 @@
                 </picture>
                 <div>
                     <h3>Te invitamos a conocernos</h3>
-                    <div>
-                        <button type="button"></button>
-                    </div>
-                    <div>
-                        <button type="button"></button>
-                    </div>
+                    <p>Con mas de 30 años de experiencia en el rubro, somos la empresa número 1 de tecnología en el sector. Entre nuestros trabajos destacan la gran gracia de nuestro señor y amo, al cual debemos toda nuestra vida y nuestro bienestar. Somos secos en lo que hacemos y sin duda no nos dejamos menoscabar.</p>
+                    <h4>Nuestras 3 grandes aristas son:</h4>
+                    <ul>
+                        <li>Compromiso</li>
+                        <li>Calidad</li>
+                        <li>Gestión</li>
+                    </ul>
                     <details>
                         <summary>
                             Visión
@@ -110,15 +111,52 @@
     }
 
     .about-us {
-        display: flex;
-        flex-wrap: wrap;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+
+        max-height: min-content;
+    }
+
+    .about-us h3 {
+        margin: 0;
+    }
+
+    @media only screen and (max-width: 699px) {
+        .about-us {
+            grid-template-columns: repeat(1, 1fr);
+        }
     }
 
     details {
-        border: 1px solid hsl(var(--white), 10%);
-        border-radius: .25rem;
+        border: 1px solid hsl(var(--border-clr),20%);
+        border-top: 5px solid hsl(var(--important));
+        border-bottom: 5px solid hsl(var(--important));
+        border-radius: var(--radius-accent);
         cursor: pointer;
         pointer-events: all;
+    }
+
+    details:first-of-type {
+        margin-block-end: 1rem;
+    }
+
+    details summary:is(:hover, :focus, :focus-visible) {
+        outline: 0;
+    }
+
+    details:has(summary:is(:hover, :focus, :focus-visible)) {
+        border-top: 5px solid hsl(var(--white));
+        border-bottom: 5px solid hsl(var(--white));
+    }
+
+    details > * {
+        padding: 1rem;
+    }
+
+    details summary {
+        font-size: 1.5rem;
+        user-select: none;
     }
 
     details::marker {
@@ -126,16 +164,28 @@
     }
 
     details[open] {
+        border-top: 5px solid hsl(var(--important)) !important;
+        border-bottom: 5px solid hsl(var(--important)) !important;
+    }
 
+    details[open] > summary {
+        background-color: hsl(var(--important));
+        transition: background-color 200ms linear;
+    }
+
+    details[open] > p {
+        height: 100%;
+        transition: height 300ms ease;
     }
 
     details > p {
         margin: 0;
+        height: 0;
     }
     
     details[open] > p {
-        color: black;
-        background-color: white;
+        color: hsl(var(--main-dark));
+        background-color: hsl(var(--white));
     }
 
     .proposal {
