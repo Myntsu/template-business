@@ -128,8 +128,8 @@
 
     details {
         border: 1px solid hsl(var(--border-clr),20%);
-        border-top: 5px solid hsl(var(--important));
-        border-bottom: 5px solid hsl(var(--important));
+        border-top: 2px solid hsl(var(--important));
+        border-bottom: 2px solid hsl(var(--important));
         border-radius: var(--radius-accent);
         cursor: pointer;
         pointer-events: all;
@@ -144,8 +144,8 @@
     }
 
     details:has(summary:is(:hover, :focus, :focus-visible)) {
-        border-top: 5px solid hsl(var(--white));
-        border-bottom: 5px solid hsl(var(--white));
+        border-top: 2px solid hsl(var(--white));
+        border-bottom: 2px solid hsl(var(--white));
     }
 
     details > * {
@@ -159,16 +159,26 @@
 
     details::marker {
         unicode-bidi: embed;
+        font-variant-numeric: proportional-nums;
     }
 
     details[open] {
-        border-top: 5px solid hsl(var(--important)) !important;
-        border-bottom: 5px solid hsl(var(--important)) !important;
+        border-top: none !important;
+        border-bottom: 1px solid hsl(var(--border-clr),20%) !important;
+
     }
 
     details[open] > summary {
-        background-color: hsl(var(--important));
-        transition: background-color 200ms linear;
+        background-image: linear-gradient(
+            145deg,
+            hsl(var(--important)) 5%,
+            hsl(223, 60%, 55%) 10%,
+            hsl(223, 70%, 65%) 20%,
+            hsl(223, 80%, 74%) 30%
+            );
+        background-size: 400%;
+        color: hsl(var(--white));
+        border-radius: .5rem;
     }
 
     details[open] > p {
@@ -182,8 +192,8 @@
     }
     
     details[open] > p {
-        color: hsl(var(--main-dark));
-        background-color: hsl(var(--white));
+        /* color: hsl(var(--main-dark)); */
+        /* background-color: hsl(var(--white)); */
     }
 
     .proposals-wrapper {

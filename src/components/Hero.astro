@@ -92,13 +92,21 @@
         margin-block-start: 1rem;
         padding: 0 1rem;
         
+        background-image: linear-gradient(
+            145deg,
+            hsl(var(--important)) 5%,
+            hsl(223, 60%, 55%) 10%,
+            hsl(223, 70%, 65%) 20%,
+            hsl(223, 80%, 74%) 30%
+            );
+        background-size: 400%;
         font-size: calc(var(--font) * 2);
         color: hsl(var(--white));
         text-align: center;
         text-decoration: none;
         
-        border: .15rem solid hsl(var(--white));
-        border-radius: calc(var(--radius) - .125em);
+        border: .1rem solid hsl(var(--white));
+        border-radius: .75rem;
         overflow: hidden;
         backdrop-filter: blur(10px);
     }
@@ -118,7 +126,7 @@
     }
 
     .call-to-action:is(:hover, :focus-visible) {
-        border: .15rem solid hsl(var(--important));
+        border: .1rem solid hsl(var(--important));
     }
 
     .call-to-action:is(:hover, :focus-visible)::before {
