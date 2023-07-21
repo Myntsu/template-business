@@ -209,8 +209,9 @@ const { favicon = "/favicon/", faviconLight = "/favicon/" } = Astro.props as Pro
 	}
 
 	@media(prefers-reduced-motion) {
-		.hidden {
+		* {
 			transition: none;
+			animation: none;
 		}
 	}
 
