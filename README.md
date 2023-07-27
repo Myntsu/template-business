@@ -1,7 +1,7 @@
 # Landing page template
 
-This is simply a landing page for local or international businesses, written in Spanish.
+This is a template for a landing page, comercialized.
 
-*The type of landing page is focusing on a more serious type of business.*
+*This kind of landing page specializes in more serious business or e-commerces*
 
 Demo: [Live link](https://jovial-sunflower-25dc31.netlify.app/)
